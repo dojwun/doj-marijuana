@@ -40,4 +40,4 @@ Script that allows players to Harvest,Plant,Sell & Smoke Marijuana
 - low potency = 1-9% thc
 - mid potency = 10-18% thc
 - high potency = 20-32% thc
-- marijuana characteristics are choosen at random 
+- marijuana characteristics are choosen at random  
