@@ -11,33 +11,40 @@ Script that allows players to Harvest,Plant,Sell & Smoke Marijuana
 - joints can only be rolled with 3.5 marijuana baggies
 - 1 baggie = 3 joints
 
-### Process
+### **[Process](https://streamable.com/pjp8pf)**
 - harvested crops and process into 1oz packaged marijuana
-- combine 1oz to 3.5 baggies
+- **[combine](https://streamable.com/l6lvbc)** 1oz to 3.5 baggies
 - use baggies to process on-the-go if you have a scale
 
-### Grow
+### **[Grow](https://streamable.com/pjp8pf)**
 - grow plants anywhere with seeds
 - take care of plants with water/food
 - crops can be destroyed, harvested or even die
 - grown crops are the high potency
+- player grown crops have 6 growth stages
+
+**[stage-1](https://i.imgur.com/bbOtecx.jpg)**
+**[stage-2](https://i.imgur.com/kfKVVM2.jpg)**
+**[stage-3](https://i.imgur.com/atcRZNH.jpg)**
+**[stage-4](https://i.imgur.com/rdWYLun.jpg)**
+**[stage-5](https://i.imgur.com/Ranvuh4.jpg)**
+**[stage-6](https://i.imgur.com/yL2mMP7.jpg)**
+
 
 ### Harvest
 - harvest crops from 2 locations [near lake & the weed farm]
 - a trowel is needed to harvest crops near the lake
-- crops harvested from the lake are low potency
-- crops harvested from the marijuana farm are mid potency
+- crops harvested from **[the lake](https://streamable.com/luzk8a)** are low potency
+- crops harvested from **[the weed farm](https://streamable.com/jvpu37)** are mid potency
+- crops harvested from **[player grown plants](https://streamable.com/4qdf3t)** are high potency
 
 ### Sell
 - sell 3.5 grams on the street to npc in certan locations with a burner phone
 - sell 1oz to Smoke on the Water shops
 
-### Marijuana
-- there is 3 types of marijuana (potency) low, mid & high
+### Marijuana characteristics (if using ```function FormatItemInfo``` )
+- there is 3 types of marijuana (potency) **[low](https://i.imgur.com/i2UQvD2.png)**, **[mid](https://i.imgur.com/gPmcPXf.png)** & **[high](https://i.imgur.com/ohEUFC0.png)**
 - each type of marijuana has 12 diffrent strains 4 hybrid, 4 indica & 4 sativa
-- low potency = 1-9% thc
-- mid potency = 10-18% thc
-- high potency = 20-32% thc
 - marijuana characteristics are choosen at random  
 
 # Required
