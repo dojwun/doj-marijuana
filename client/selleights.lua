@@ -122,7 +122,7 @@ RegisterNetEvent('doj:client:useBurnerPhone', function()
     local zone = tostring(GetNameOfZone(x, y, z))
     local Area = zoneNames[tostring(zone)]
 
-	if (Area == "Mirror Park") or (Area == "Davis") or (Area == "Chamberlain Hills") or (Area == "Del Perro Beach") then
+	if (Area == Config.cornerSellLocation1) or (Area == Config.cornerSellLocation2) or (Area == Config.cornerSellLocation3) or (Area == Config.cornerSellLocation4) then 
 		sellingweed = true
 		cooldown = true
 		exports['progressBars']:drawBar(5000, 'Selling active')
