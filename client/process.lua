@@ -1,7 +1,7 @@
 
 
 -- grand senora desert
-exports['qb-target']:AddBoxZone("marijuanaTrimmer", vector3(848.161, 2864.132, 58.486), 1.0, 1.5, {
+exports['qb-target']:AddBoxZone("marijuanaTrimmer", Config.cropProcessMenu, 1.0, 1.5, {
     name="marijuanaTrimmer",
     heading= 301.978,
     debugPoly=false,
@@ -34,7 +34,7 @@ RegisterNetEvent('doj:client:attemptTrimmer', function()
         if GetClockHours() >= 6 and GetClockHours() <= 21 then
             local chance = math.random(100)
             if chance <= 50 then
-                    TriggerEvent("doj:client:mainProcessMenu")
+                TriggerEvent("doj:client:mainProcessMenu")
                 QBCore.Functions.Notify('Yo whats up', 'success')
             else
                 QBCore.Functions.Notify('No Response... maby try again', 'primary')
