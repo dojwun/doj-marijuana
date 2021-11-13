@@ -301,11 +301,11 @@ RegisterServerEvent('doj:server:process3.5gMarijuanaBaggies', function(args)
                             end
                         end)
                     else
-                        TriggerClientEvent('QBCore:Notify', src, "You dont have enough baggies", 'error')
+                        TriggerClientEvent('QBCore:Notify', src, "You need atleast 9 baggies", 'error')
                         TriggerClientEvent('doj:client:baggieMenu', src)
                     end
                 else
-                    TriggerClientEvent('QBCore:Notify', src, "You dont have any baggies", "error")
+                    TriggerClientEvent('QBCore:Notify', src, "You need atleast 9 baggies", "error")
                     TriggerClientEvent('doj:client:baggieMenu', src)
                 end
             else
@@ -354,11 +354,11 @@ RegisterServerEvent('doj:server:process3.5gMarijuanaBaggies', function(args)
                             end
                         end)
                     else
-                        TriggerClientEvent('QBCore:Notify', src, "You dont have enough baggies", 'error')
+                        TriggerClientEvent('QBCore:Notify', src, "You need atleast 9 baggies", 'error')
                         TriggerClientEvent('doj:client:baggieMenu', src)
                     end
                 else
-                    TriggerClientEvent('QBCore:Notify', src, "You dont have any baggies", "error")
+                    TriggerClientEvent('QBCore:Notify', src, "You need atleast 9 baggies", "error")
                     TriggerClientEvent('doj:client:baggieMenu', src)
                 end
             else
@@ -407,11 +407,11 @@ RegisterServerEvent('doj:server:process3.5gMarijuanaBaggies', function(args)
                             end
                         end)
                     else
-                        TriggerClientEvent('QBCore:Notify', src, "You dont have enough baggies", 'error')
+                        TriggerClientEvent('QBCore:Notify', src, "You need atleast 9 baggies", 'error')
                         TriggerClientEvent('doj:client:baggieMenu', src)
                     end
                 else
-                    TriggerClientEvent('QBCore:Notify', src, "You dont have any baggies", "error")
+                    TriggerClientEvent('QBCore:Notify', src, "You need atleast 9 baggies", "error")
                     TriggerClientEvent('doj:client:baggieMenu', src)
                 end
             else
