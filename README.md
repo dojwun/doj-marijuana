@@ -16,7 +16,7 @@ Script that allows players to Harvest,Plant,Sell & Smoke Marijuana
 - **[combine](https://streamable.com/l6lvbc)** 1oz to 3.5 baggies
 - use baggies to process on-the-go if you have a scale
 
-### **[Grow](https://streamable.com/pjp8pf)**
+### **[Player Grow](https://streamable.com/ec6ukb)**
 - grow plants anywhere with seeds
 - take care of plants with water/food
 - crops can be destroyed, harvested or even die
