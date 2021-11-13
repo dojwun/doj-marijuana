@@ -1,7 +1,5 @@
 # doj-marijuana
 
-# Coming Soon
-
 Script that allows players to Harvest,Plant,Sell & Smoke Marijuana
 
 # More Info Coming Soon
