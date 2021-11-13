@@ -1,6 +1,6 @@
 Config = {}
 
-Config.WeedField = vector3(311.286, 4304.369, 46.82) -- Location of the weed farm my the lake
+Config.WeedField = vector3(311.286, 4304.369, 46.82) -- Location of the weed farm by the lake
 
 Config.SmokeontheWaterItems = {                      -- Items sold at Some on the Water shop
     [1] = { name = "marijuana_baggies",         price = 5,   amount = 999, info = {}, type = "item", slot = 1 },
@@ -13,21 +13,24 @@ Config.SmokeontheWaterItems = {                      -- Items sold at Some on th
     [8] = { name = "marijuana_nutrition",       price = 500, amount = 999, info = {}, type = "item", slot = 8 },
 }
 
-Config.lowGradeOzPrice = math.random(100,150)       -- Price of 1 low grade oz
-Config.midGradeOzPrice = math.random(200,250)       -- Price of 1 mid grade oz
-Config.highGradeOzPrice = math.random(300,350)      -- Price of 1 high grade oz
+Config.lowGradeOzPrice      = math.random(100,150)      -- Price of 1 low grade oz
+Config.midGradeOzPrice      = math.random(200,250)      -- Price of 1 mid grade oz
+Config.highGradeOzPrice     = math.random(300,350)      -- Price of 1 high grade oz
 
-Config.lowGradeEighthPrice = math.random(20,40)     -- Price of 1 low grade eighth
-Config.midGradeEighthPrice = math.random(45,60)     -- Price of 1 mid grade eighth
-Config.highGradeEighthPrice = math.random(70,99)    -- Price of 1 high grade eighth
+Config.lowGradeEighthPrice  = math.random(20,40)        -- Price of 1 low grade eighth
+Config.midGradeEighthPrice  = math.random(45,60)        -- Price of 1 mid grade eighth
+Config.highGradeEighthPrice = math.random(70,99)        -- Price of 1 high grade eighth
 
 
-Config.cornerSellLocation1 = "Mirror Park"
+Config.cornerSellLocation1 = "Mirror Park"              -- *Avalible corner selling locations (see below)     
 Config.cornerSellLocation2 = "Davis"
 Config.cornerSellLocation3 = "Chamberlain Hills"
 Config.cornerSellLocation4 = "Del Perro Beach"
 
 
+--Target Locations
+Config.smokeShopMenu    = vector3(-1172.088, -1571.833, 4.664)
+Config.cropProcessMenu  = vector3(848.161, 2864.132, 58.486)
 
 
 
@@ -60,8 +63,7 @@ Config.cornerSellLocation4 = "Del Perro Beach"
 
 
 
-
--- Avalible corner selling locations
+-- *Avalible corner selling locations
 -- "Los Santos International Airport",
 -- "Alamo Sea",
 -- "Alta",
