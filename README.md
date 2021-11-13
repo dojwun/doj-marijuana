@@ -25,8 +25,8 @@ Script that allows players to Harvest,Plant,Sell & Smoke Marijuana
 
 **[stage-1](https://i.imgur.com/bbOtecx.jpg)**
 **[stage-2](https://i.imgur.com/kfKVVM2.jpg)**
-**[stage-3](https://i.imgur.com/atcRZNH.jpg)**
-**[stage-4](https://i.imgur.com/rdWYLun.jpg)**
+**[stage-3](https://i.imgur.com/rdWYLun.jpg)**
+**[stage-4](https://i.imgur.com/qlua3Se.jpg)**
 **[stage-5](https://i.imgur.com/Ranvuh4.jpg)**
 **[stage-6](https://i.imgur.com/yL2mMP7.jpg)**
 
