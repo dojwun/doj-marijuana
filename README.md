@@ -5,7 +5,7 @@ Script that allows players to Harvest,Plant,Sell & Smoke Marijuana
 # More Info Coming Soon
 
 ### Joints
-- roll a joint & 3g joint
+- roll a **[joint](https://streamable.com/dcw13v)** & **[3g joint](https://streamable.com/z2n3bw)**
 - lighter is required to smoke
 - papers are required to roll
 - joints can only be rolled with 3.5 marijuana baggies
@@ -14,7 +14,7 @@ Script that allows players to Harvest,Plant,Sell & Smoke Marijuana
 ### **[Process](https://streamable.com/pjp8pf)**
 - harvested crops and process into 1oz packaged marijuana
 - **[combine](https://streamable.com/l6lvbc)** 1oz to 3.5 baggies
-- use baggies to process on-the-go if you have a scale
+- use baggies to **[weigh & bag up](https://streamable.com/gh2cva)** 1oz in to 3.5gs if you have a scale and 9 baggies
 
 ### **[Player Grow](https://streamable.com/ec6ukb)**
 - grow plants anywhere with seeds
@@ -40,7 +40,7 @@ Script that allows players to Harvest,Plant,Sell & Smoke Marijuana
 
 ### Sell
 - sell 3.5 grams on the street to npc in certan locations with a burner phone
-- sell 1oz to Smoke on the Water shops
+- sell 1oz to **[Smoke on the Water](https://streamable.com/eryvdi)** shops
 
 ### Marijuana characteristics (if using ```function FormatItemInfo``` )
 - there is 3 types of marijuana (potency) **[low](https://i.imgur.com/i2UQvD2.png)**, **[mid](https://i.imgur.com/gPmcPXf.png)** & **[high](https://i.imgur.com/ohEUFC0.png)**
