@@ -21,3 +21,135 @@ Config.lowGradeEighthPrice = math.random(20,40)     -- Price of 1 low grade eigh
 Config.midGradeEighthPrice = math.random(45,60)     -- Price of 1 mid grade eighth
 Config.highGradeEighthPrice = math.random(70,99)    -- Price of 1 high grade eighth
 
+
+Config.cornerSellLocation1 = "Mirror Park"
+Config.cornerSellLocation2 = "Davis"
+Config.cornerSellLocation3 = "Chamberlain Hills"
+Config.cornerSellLocation4 = "Del Perro Beach"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- Avalible corner selling locations
+-- "Los Santos International Airport",
+-- "Alamo Sea",
+-- "Alta",
+-- "Fort Zancudo",
+-- "Banham Canyon Dr",
+-- "Banning",
+-- "Baytree Canyon", 
+-- "Vespucci Beach",
+-- "Banham Canyon",
+-- "Braddock Pass",
+-- "Braddock Tunnel",
+-- "Burton",
+-- "Calafia Bridge",
+-- "Raton Canyon",
+-- "Cassidy Creek",
+-- "Chamberlain Hills",
+-- "Vinewood Hills",
+-- "Chumash",
+-- "Chiliad Mountain State Wilderness",
+-- "Cypress Flats",
+-- "Davis",
+-- "Del Perro Beach",
+-- "Del Perro",
+-- "La Puerta",
+-- "Grand Senora Desert",
+-- "Downtown",
+-- "Downtown Vinewood",
+-- "East Vinewood",
+-- "El Burro Heights",
+-- "El Gordo Lighthouse",
+-- "Elysian Island",
+-- "Galilee",
+-- "Galileo Park",
+-- "GWC and Golfing Society",
+-- "Grapeseed",
+-- "Great Chaparral",
+-- "Harmony",
+-- "Hawick",
+-- "Vinewood Racetrack",
+-- "Humane Labs and Research",
+-- "Bolingbroke Penitentiary",
+-- "Little Seoul",
+-- "Land Act Reservoir",
+-- "Lago Zancudo",
+-- "Land Act Dam",
+-- "Legion Square",
+-- "La Mesa",
+-- "La Puerta",
+-- "Mirror Park",
+-- "Morningwood",
+-- "Richards Majestic",
+-- "Mount Chiliad",
+-- "Mount Gordo",
+-- "Mount Josiah",
+-- "Murrieta Heights",
+-- "North Chumash",
+-- "N.O.O.S.E",
+-- "Pacific Ocean",
+-- "Paleto Cove",
+-- "Paleto Bay",
+-- "Paleto Forest",
+-- "Palomino Highlands",
+-- "Palmer-Taylor Power Station",
+-- "Pacific Bluffs",
+-- "Pillbox Hill",
+-- "Procopio Beach",
+-- "Rancho",
+-- "Richman Glen",
+-- "Richman",
+-- "Rockford Hills",
+-- "Redwood Lights Track",
+-- "San Andreas",
+-- "San Chianski Mountain Range",
+-- "Sandy Shores",
+-- "Mission Row",
+-- "Stab City",
+-- "Maze Bank Arena",
+-- "Strawberry",
+-- "Tataviam Mountains",
+-- "Terminal",
+-- "Textile City",
+-- "Tongva Hills",
+-- "Tongva Valley",
+-- "Vespucci Canals",
+-- "Vespucci",
+-- "Vinewood",
+-- "Ron Alternates Wind Farm",
+-- "West Vinewood",
+-- "Zancudo River",
+-- "Port of South Los Santos",
+-- "Davis Quartz"
