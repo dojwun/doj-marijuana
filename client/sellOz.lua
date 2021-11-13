@@ -1,5 +1,5 @@
 -- Smoke on the water
-exports['qb-target']:AddBoxZone("sellOz", vector3(-1172.088, -1571.833, 4.664), 1.0, 3.0, {
+exports['qb-target']:AddBoxZone("sellOz", Config.smokeShopMenu, 1.0, 3.0, {
     name="sellOz",
     heading= 127.339,
     debugPoly=false,
