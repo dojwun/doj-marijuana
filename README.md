@@ -39,7 +39,7 @@ Script that allows players to Harvest,Plant,Sell & Smoke Marijuana
 - crops harvested from **[player grown plants](https://streamable.com/4qdf3t)** are high potency
 
 ### Sell
-- sell 3.5 grams on the street to npc in certan locations with a burner phone
+- sell **[3.5 grams](https://streamable.com/afe4ta)** on the street to npc in certan locations with a **[burner phone](https://streamable.com/qhz86v)**
 - sell 1oz to **[Smoke on the Water](https://streamable.com/eryvdi)** shops
 
 ### Marijuana characteristics (if using ```function FormatItemInfo``` )
