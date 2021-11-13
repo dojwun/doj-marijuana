@@ -83,7 +83,7 @@ Script that allows players to Harvest,Plant,Sell & Smoke Marijuana
 ```
 
 # Optional (if you are not using my **[qb-inventory](https://github.com/dojwun/qb-inventory)**)
-- This code is to display **[Inventory Tooltip]()** 
+- This code is to display **[Inventory Tooltip](https://i.imgur.com/ohEUFC0.png)** 
 - inside ```qb-inventory/html/js/app.js``` look for the ```function FormatItemInfo```
 ```
           else if (itemData.name == "marijuana_1oz_low") {
