@@ -1,3 +1,6 @@
+
+local QBCore = exports['qb-core']:GetCoreObject()
+
 -------- START OF JOINTS ------------
 RegisterNetEvent('doj:client:smokeJoint', function(prop_name)
     local playerPed = PlayerPedId()
