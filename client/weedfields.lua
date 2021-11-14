@@ -1,3 +1,4 @@
+local QBCore = exports['qb-core']:GetCoreObject()
 
 -- WeedField
 exports['qb-target']:AddTargetModel(`prop_weed_02`, {
