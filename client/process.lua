@@ -1,4 +1,5 @@
 
+local QBCore = exports['qb-core']:GetCoreObject()
 
 -- grand senora desert
 exports['qb-target']:AddBoxZone("marijuanaTrimmer", Config.cropProcessMenu, 1.0, 1.5, {
