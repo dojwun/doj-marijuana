@@ -1,3 +1,6 @@
+
+local QBCore = exports['qb-core']:GetCoreObject()
+
 --==========================================================================
 
 RegisterServerEvent('doj:server:process1ozMarijuana', function(args) 
