@@ -1,4 +1,7 @@
 
+local QBCore = exports['qb-core']:GetCoreObject()
+
+
 QBCore.Functions.CreateUseableItem("marijuana_seeds", function(source, item)
     TriggerClientEvent("doj:client:startPlanting", source, 'marijuana_seeds') 
 end)
