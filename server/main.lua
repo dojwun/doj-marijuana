@@ -1,4 +1,6 @@
 
+local QBCore = exports['qb-core']:GetCoreObject()
+
 RegisterNetEvent("doj:server:addLowGradeMarijuana", function() 
     local src = source
     local Player  = QBCore.Functions.GetPlayer(src)
