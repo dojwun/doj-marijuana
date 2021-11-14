@@ -1,4 +1,6 @@
 
+local QBCore = exports['qb-core']:GetCoreObject()
+
 CreateThread(function()
     updatePlants()
 end)
