@@ -1,4 +1,6 @@
 
+local QBCore = exports['qb-core']:GetCoreObject()
+
 crop_type = {
     ["crop_stage"] = {
         stage_1 = {"bkr_prop_weed_bud_pruned_01a", -1.05},
