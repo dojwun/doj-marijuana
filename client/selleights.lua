@@ -1,5 +1,5 @@
+local QBCore = exports['qb-core']:GetCoreObject()
 --======================================================================================================== Sell Eights
-
 
 local pedAvailable = {}
 local sellAmount = 0
@@ -116,13 +116,11 @@ RegisterNetEvent('doj:client:useBurnerPhone', function()
 		QBCore.Functions.Notify('You can only sell once every 5 minutes.', 'error')
 		return
 	end
-
 	local ped = PlayerPedId()
     local x, y, z = table.unpack(GetEntityCoords(ped, true))
     local zone = tostring(GetNameOfZone(x, y, z))
     local Area = zoneNames[tostring(zone)]
-
-	if (Area == Config.cornerSellLocation1) or (Area == Config.cornerSellLocation2) or (Area == Config.cornerSellLocation3) or (Area == Config.cornerSellLocation4) then 
+	if (Area == Config.cornerSellLocation.area1) or (Area == Config.cornerSellLocation.area2) or (Area == Config.cornerSellLocation.area3) or (Area == Config.cornerSellLocation.area4) or (Area == Config.cornerSellLocation.area5) or (Area == Config.cornerSellLocation.area6) or (Area == Config.cornerSellLocation.area7) or (Area == Config.cornerSellLocation.area8) or (Area == Config.cornerSellLocation.area9) or (Area == Config.cornerSellLocation.area10) then
 		sellingweed = true
 		cooldown = true
 		exports['progressBars']:drawBar(5000, 'Selling active')
@@ -172,33 +170,43 @@ RegisterNetEvent('doj:client:AllowSale', function(NPC)
 			return
 		end
 		local x,y,z=table.unpack(GetEntityCoords(NPC))
+		local distance = GetDistanceBetweenCoords(GetEntityCoords(player),x,y,z,true)
 
-		if GetDistanceBetweenCoords(GetEntityCoords(player),x,y,z,true) < 2.0 then
+		if distance < 2.0 then
 			exports['textUi']:DrawTextUi('show', "[E] - sell [H] - Shoo")
-
-			if IsControlJustReleased(2,38) and GetDistanceBetweenCoords(GetEntityCoords(player),x,y,z,true) < 2.0 then
-				QBCore.Functions.TriggerCallback('doj:server:checkEights', function(result)
-					if result ~= nil then
-						cornerSellingMenu()
-					else
-						exports['textUi']:DrawTextUi('hide')
-						EndSelling()
-						QBCore.Functions.Notify('You dont have any eights to sell', 'error')
-					end
-				end)
-				ClearPedTasks(NPC)
-				ClearPedSecondaryTask(NPC)
-				TaskTurnPedToFaceEntity(NPC, player, 1.0)
-				PlayAmbientSpeech1(NPC, "Generic_Hows_It_Going", "Speech_Params_Force")
-				TaskStartScenarioInPlace(NPC, "WORLD_HUMAN_STAND_IMPATIENT_UPRIGHT", 0, false)
-				Wait(8000)
-				if TaskStartScenarioInPlace(NPC, "WORLD_HUMAN_STAND_IMPATIENT_UPRIGHT", 0, false) then
-					PlayAmbientSpeech1(NPC, "Chat_State", "Speech_Params_Force")
+			if IsControlJustReleased(2,38) and distance < 2.0 then
+				local chance = math.random(1, 20) 
+				if chance <= 5 then
+					QBCore.Functions.Notify('The buyer has changed their mind.', 'error')
 					TaskWanderStandard(NPC, 10.0, 10)
-					Wait(1000)
-					exports['qb-menu']:closeMenu()
+					PlayAmbientSpeech1(NPC, "Apology_No_Trouble", "Speech_Params_Force_Shouted_Critical")
+					exports['textUi']:DrawTextUi('hide')
+					return
+				else
+					QBCore.Functions.TriggerCallback('doj:server:checkEights', function(result)
+						if result ~= nil then
+							cornerSellingMenu()
+						else
+							exports['textUi']:DrawTextUi('hide')
+							EndSelling()
+							QBCore.Functions.Notify('You dont have any eights to sell', 'error')
+						end
+					end)
+					ClearPedTasks(NPC)
+					ClearPedSecondaryTask(NPC)
+					TaskTurnPedToFaceEntity(NPC, player, 1.0)
+					PlayAmbientSpeech1(NPC, "Generic_Hows_It_Going", "Speech_Params_Force")
+					TaskStartScenarioInPlace(NPC, "WORLD_HUMAN_STAND_IMPATIENT_UPRIGHT", 0, false)
+					Wait(8000)
+					if TaskStartScenarioInPlace(NPC, "WORLD_HUMAN_STAND_IMPATIENT_UPRIGHT", 0, false) then
+						PlayAmbientSpeech1(NPC, "Chat_State", "Speech_Params_Force")
+						TaskWanderStandard(NPC, 10.0, 10)
+						Wait(1000)
+						exports['textUi']:DrawTextUi('hide')
+						exports['qb-menu']:closeMenu()
+					end
+					return
 				end
-				return
 			end
 			if IsControlJustReleased(2,74) and GetDistanceBetweenCoords(GetEntityCoords(player),x,y,z,true) < 2.0 then
 				TaskWanderStandard(NPC, 10.0, 10)
