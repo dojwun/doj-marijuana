@@ -22,10 +22,18 @@ Config.midGradeEighthPrice  = math.random(45,60)        -- Price of 1 mid grade 
 Config.highGradeEighthPrice = math.random(70,99)        -- Price of 1 high grade eighth
 
 
-Config.cornerSellLocation1 = "Mirror Park"              -- *Avalible corner selling locations (see below)     
-Config.cornerSellLocation2 = "Davis"
-Config.cornerSellLocation3 = "Chamberlain Hills"
-Config.cornerSellLocation4 = "Del Perro Beach"
+Config.cornerSellLocation = { -- *Avalible corner selling locations (see below) Max 10
+    area1 = 'Mirror Park',
+	area2 = 'Davis',
+    area3 = 'Chamberlain Hills',
+    area4 = 'Del Perro Beach',
+    area5 = '',
+    area6 = '',
+    area7 = '',
+    area8 = '',
+    area9 = '',
+    area10 = '',
+}
 
 
 --Target Locations
