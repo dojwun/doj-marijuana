@@ -1,4 +1,7 @@
 
+local QBCore = exports['qb-core']:GetCoreObject()
+
+
 RegisterServerEvent('doj:server:sellOz', function(args) 
 	local src = source
     local Player = QBCore.Functions.GetPlayer(src)
