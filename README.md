@@ -104,6 +104,6 @@ Script that allows players to Harvest,Plant,Sell & Smoke Marijuana
         } else if (itemData.name == "marijuana_3.5_high") {
             $(".item-info-title").html('<p>' + itemData.label + '</p>')
             $(".item-info-description").html('<p>Strain: ' + itemData.info.strain + '</p>Potency: ' + itemData.info.potency + '</p>Type: ' + itemData.info.type + '<p>Thc: ' + itemData.info.thc + '%</p>');
-        } 
+        }  
 ```
 
