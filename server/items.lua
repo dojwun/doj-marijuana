@@ -3,7 +3,11 @@ local QBCore = exports['qb-core']:GetCoreObject()
 
 
 QBCore.Functions.CreateUseableItem("marijuana_seeds", function(source, item)
-    TriggerClientEvent("doj:client:startPlanting", source, 'marijuana_seeds') 
+    local src = source
+	local Player = QBCore.Functions.GetPlayer(src)
+	if Player.Functions.GetItemByName(item.name) ~= nil then
+        TriggerClientEvent("doj:client:startPlanting", src, 'marijuana_seeds') 
+	end 
 end)
 
 QBCore.Functions.CreateUseableItem("marijuana_baggies", function(source, item)
