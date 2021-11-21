@@ -1,6 +1,4 @@
-
 local QBCore = exports['qb-core']:GetCoreObject()
-
 crop_type = {
     ["crop_stage"] = {
         stage_1 = {"bkr_prop_weed_bud_pruned_01a", -1.05},
@@ -19,7 +17,6 @@ CurrentPlantInfo = nil
 
 local nearPlant = true
 local shown = false
-local action = false
 
 --======================================================================= Threads
 
@@ -27,33 +24,31 @@ CreateThread(function()
     while true do
         local ped = PlayerPedId()
         local nPlant = nearPlant(ped)
-        if QBCore ~= nil then
-            if nPlant ~= false then
-                if not shown then
-                    shown = true
-                    QBCore.Functions.TriggerCallback("doj:server:getPlant",function(info)
-                        CurrentPlant = nPlant
-                        CurrentPlantInfo = info
-                        if CurrentPlantInfo.food and CurrentPlantInfo.water == 0 then
-                            PlantMenuDead()
-                        else
-                            PlantMenuAlive()
-                        end
-                    end,nPlant)
-                end
-            else
-                if shown then
-                    CurrentPlant = nil
-                    CurrentPlantInfo = nil
-                    exports['qb-menu']:closeMenu() 
-                    shown = false
-                end
+        if nPlant ~= false then
+            if not shown then
+                shown = true
+                QBCore.Functions.TriggerCallback("doj:server:getPlant",function(info)
+                    CurrentPlant = nPlant
+                    CurrentPlantInfo = info
+                    if CurrentPlantInfo.food and CurrentPlantInfo.water == 0 then
+                        PlantMenuDead()
+                    else
+                        PlantMenuAlive()
+                    end
+                end,nPlant)
             end
-            if nPlant == false then
-                Wait(1000)
-            else
-                Wait(1)
+        else
+            if shown then
+                CurrentPlant = nil
+                CurrentPlantInfo = nil
+                exports['qb-menu']:closeMenu() 
+                shown = false
             end
+        end
+        if nPlant == false then
+            Wait(1000)
+        else
+            Wait(1)
         end
         Wait(100)
     end
@@ -96,12 +91,10 @@ RegisterNetEvent("doj:client:startPlanting",function(plant)
             end
         end
 
-        if canPlant and not action then
-
+        if canPlant then
             TriggerServerEvent("doj:server:addPlant", plant, coords)
-            action = true
         else
-            QBCore.Functions.Notify('You cant plant here', 'error')
+            QBCore.Functions.Notify('You are to close to another plant', 'error')
         end
     else
         QBCore.Functions.Notify('You cant plant here', 'error')
@@ -118,7 +111,6 @@ RegisterNetEvent("doj:client:addPlant",function(seed, coords, id)
     ClearPedTasks(ped)
     SpawnedPlants[id] =CreateObject(GetHashKey(crop_type[entity].stage_1[1]),coords[1],coords[2],coords[3] + crop_type[entity].stage_1[2],false,true,1)
     SetEntityAsMissionEntity(SpawnedPlants[id], true, true)  
-    action = false
 end)
 
 RegisterNetEvent('doj:client:cropOptions', function(args, data)
@@ -164,10 +156,6 @@ RegisterNetEvent('doj:client:cropOptions', function(args, data)
             end
         end, "marijuana_water")
     elseif args == 3 then
-        if action then
-            return
-        end
-        action = true
         local ped = PlayerPedId()
         TaskStartScenarioInPlace(ped, "world_human_gardener_plant", 0, false)
         exports['qb-menu']:closeMenu() 
@@ -183,14 +171,9 @@ RegisterNetEvent('doj:client:cropOptions', function(args, data)
         CurrentPlantInfo = nil
         ClearPedTasks(ped)
         Wait(4000)
-        action = false
         ClearPedTasksImmediately(ped)
     elseif args == 4 then
-        if action then
-            return
-        end
         local ped = PlayerPedId()
-        action = true
         TaskStartScenarioInPlace(ped, "world_human_gardener_plant", 0, false)
         exports['qb-menu']:closeMenu() 
         Wait(2000)
@@ -204,7 +187,6 @@ RegisterNetEvent('doj:client:cropOptions', function(args, data)
         CurrentPlantInfo = nil
         ClearPedTasks(ped)
         Wait(4000)
-        action = false
         ClearPedTasksImmediately(ped)
     else
         exports['qb-menu']:closeMenu() 
@@ -267,7 +249,7 @@ end
 
 function nearPlant(ped)
     for k, v in pairs(Plants) do
-        if #(v.coords - GetEntityCoords(ped)) < 1.2 then
+        if #(v.coords - GetEntityCoords(ped)) < 1.0 then
             return k
         end
     end
@@ -302,7 +284,7 @@ end
 
 function PlantMenuStacic()
     exports['qb-menu']:openMenu({
-        {
+        { 
             header = "Marijuana Plant: "..CurrentPlant,
             txt = "Stage: "..CurrentPlantInfo.stage.."%<p>Rate: "..CurrentPlantInfo.rate.."%",
             isMenuHeader = true
