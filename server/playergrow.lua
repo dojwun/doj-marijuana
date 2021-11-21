@@ -1,4 +1,3 @@
-
 local QBCore = exports['qb-core']:GetCoreObject()
 
 CreateThread(function()
@@ -31,21 +30,22 @@ function updatePlants()
 end
 
 function addPlant(seed, coords, id)
-    local rate = 10
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
     local zone = nil
     exports.oxmysql:insert('INSERT INTO player_crops (coords, seed, stage, rate, water, food) VALUES (?, ?, ?, ?, ?, ?)',{
         json.encode({x = coords[1], y = coords[2], z = coords[3]}),
         seed,
         0,
-        rate,
+        10,
         10,
         10
     },function(id)
-        TriggerClientEvent("doj:client:addPlant", -1, seed, coords, id)
+        TriggerClientEvent("doj:client:addPlant", src, seed, coords, id)
     end)
 end
 
-RegisterNetEvent("doj:server:addPlant",function(seed, coords)
+RegisterNetEvent("doj:server:addPlantToDatabase",function(seed, coords)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     addPlant(seed, coords, src)
