@@ -92,7 +92,7 @@ RegisterNetEvent("doj:client:startPlanting",function(plant)
         end
 
         if canPlant then
-            TriggerServerEvent("doj:server:addPlant", plant, coords)
+            TriggerServerEvent("doj:server:addPlantToDatabase", plant, coords)
         else
             QBCore.Functions.Notify('You are to close to another plant', 'error')
         end
