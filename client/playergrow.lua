@@ -105,7 +105,7 @@ RegisterNetEvent("doj:client:addPlant",function(seed, coords, id)
     local entity = 'crop_stage'
     local ped = PlayerPedId()
     Plants[id] = {seed = seed, coords = coords}
-    exports['progressBars']:drawBar(6000, 'Planting...')
+    QBCore.Functions.Notify("Planting...", "success", 6000)
     TaskStartScenarioInPlace(ped, "world_human_gardener_plant", 0, false)
     Wait(100)
     ClearPedTasks(ped)
