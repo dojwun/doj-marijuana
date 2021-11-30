@@ -1,5 +1,4 @@
 local QBCore = exports['qb-core']:GetCoreObject()
-
 -- WeedField
 exports['qb-target']:AddTargetModel(`prop_weed_02`, {
 	options = {
@@ -45,7 +44,7 @@ RegisterNetEvent('doj:client:harvestLakeCrop', function()
 		if HasItem then
 			if nearbyObject and IsPedOnFoot(playerPed) then
 				isPickingUp = true
-				exports['progressBars']:drawBar(8500, 'Harvesting crop...') 
+				QBCore.Functions.Notify('Harvesting crop...', 'success', 8500)
 				TaskStartScenarioInPlace(playerPed, 'world_human_gardener_plant', 0, false)
 				Wait(6500)
 				ClearPedTasks(playerPed)
@@ -212,7 +211,7 @@ function searchPlant(entity)
             else
 				local HarvestTime = math.random(20000,30000)
                 FreezeEntityPosition(playerPed, true)
-                TriggerEvent('pogressBar:drawBar', HarvestTime, 'Harvesting crop...') 
+				QBCore.Functions.Notify("Harvesting crop...", "success", HarvestTime)
                 Wait(HarvestTime)
                 harvestedPlants[entity] = true
                 TriggerServerEvent('doj:server:addMidGradeMarijuana')
