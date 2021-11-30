@@ -123,7 +123,7 @@ RegisterNetEvent('doj:client:useBurnerPhone', function()
 	if (Area == Config.cornerSellLocation.area1) or (Area == Config.cornerSellLocation.area2) or (Area == Config.cornerSellLocation.area3) or (Area == Config.cornerSellLocation.area4) or (Area == Config.cornerSellLocation.area5) or (Area == Config.cornerSellLocation.area6) or (Area == Config.cornerSellLocation.area7) or (Area == Config.cornerSellLocation.area8) or (Area == Config.cornerSellLocation.area9) or (Area == Config.cornerSellLocation.area10) then
 		sellingweed = true
 		cooldown = true
-		exports['progressBars']:drawBar(5000, 'Selling active')
+		QBCore.Functions.Notify('This looks like a good area', 'success', 5000)
 		loadAnimDict( "amb@world_human_stand_mobile@male@standing@call@base" ) 
 		TaskPlayAnim( ped, "amb@world_human_stand_mobile@male@standing@call@base", "base", 8.0, 1.0, -1, 48, 0, 0, 0, 0 )
 		Wait(7000)
@@ -179,7 +179,7 @@ RegisterNetEvent('doj:client:AllowSale', function(NPC)
 				if chance <= 5 then
 					QBCore.Functions.Notify('The buyer has changed their mind.', 'error')
 					TaskWanderStandard(NPC, 10.0, 10)
-					PlayAmbientSpeech1(NPC, "Apology_No_Trouble", "Speech_Params_Force_Shouted_Critical")
+					PlayPedAmbientSpeechNative(NPC, "Apology_No_Trouble", "Speech_Params_Force_Shouted_Critical")
 					exports['textUi']:DrawTextUi('hide')
 					return
 				else
@@ -195,11 +195,11 @@ RegisterNetEvent('doj:client:AllowSale', function(NPC)
 					ClearPedTasks(NPC)
 					ClearPedSecondaryTask(NPC)
 					TaskTurnPedToFaceEntity(NPC, player, 1.0)
-					PlayAmbientSpeech1(NPC, "Generic_Hows_It_Going", "Speech_Params_Force")
+					PlayPedAmbientSpeechNative(NPC, "Generic_Hows_It_Going", "Speech_Params_Force")
 					TaskStartScenarioInPlace(NPC, "WORLD_HUMAN_STAND_IMPATIENT_UPRIGHT", 0, false)
 					Wait(8000)
 					if TaskStartScenarioInPlace(NPC, "WORLD_HUMAN_STAND_IMPATIENT_UPRIGHT", 0, false) then
-						PlayAmbientSpeech1(NPC, "Chat_State", "Speech_Params_Force")
+						PlayPedAmbientSpeechNative(NPC, "Chat_State", "Speech_Params_Force")
 						TaskWanderStandard(NPC, 10.0, 10)
 						Wait(1000)
 						exports['textUi']:DrawTextUi('hide')
@@ -210,7 +210,7 @@ RegisterNetEvent('doj:client:AllowSale', function(NPC)
 			end
 			if IsControlJustReleased(2,74) and GetDistanceBetweenCoords(GetEntityCoords(player),x,y,z,true) < 2.0 then
 				TaskWanderStandard(NPC, 10.0, 10)
-				PlayAmbientSpeech1(NPC, "Generic_Curse_Med", "Speech_Params_Force")
+				PlayPedAmbientSpeechNative(NPC, "Generic_Curse_Med", "Speech_Params_Force")
 				exports['textUi']:DrawTextUi('hide')
 				return
 			end
