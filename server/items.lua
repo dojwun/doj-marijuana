@@ -1,7 +1,6 @@
 
 local QBCore = exports['qb-core']:GetCoreObject()
 
-
 QBCore.Functions.CreateUseableItem("marijuana_seeds", function(source, item)
     local src = source
 	local Player = QBCore.Functions.GetPlayer(src)
@@ -26,8 +25,8 @@ QBCore.Functions.CreateUseableItem("marijuana_3.5_low", function(source, item)
     local rollingpaper = Player.Functions.GetItemByName('marijuana_rollingpapers')
     if rollingpaper ~= nil and not alreadyrolling then
         alreadyrolling = true
-	    TriggerClientEvent('pogressBar:drawBar', src, 3700, 'Rolling Joints')
-	    Citizen.Wait(3700)
+        TriggerClientEvent('QBCore:Notify', src, "Rolling Joints", 'primary')
+	    Wait(3700)
 	    alreadyrolling = false
 
         Player.Functions.RemoveItem('marijuana_3.5_low', 1)
@@ -50,8 +49,8 @@ QBCore.Functions.CreateUseableItem("marijuana_3.5_mid", function(source, item)
     local rollingpaper = Player.Functions.GetItemByName('marijuana_rollingpapers')
     if rollingpaper ~= nil and not alreadyrolling then
         alreadyrolling = true
-	    TriggerClientEvent('pogressBar:drawBar', src, 3700, 'Rolling Joints')
-	    Citizen.Wait(3700)
+        TriggerClientEvent('QBCore:Notify', src, "Rolling Joints", 'primary')
+	    Wait(3700)
 	    alreadyrolling = false
 
         Player.Functions.RemoveItem('marijuana_3.5_mid', 1)
@@ -74,8 +73,8 @@ QBCore.Functions.CreateUseableItem("marijuana_3.5_high", function(source, item)
     local rollingpaper = Player.Functions.GetItemByName('marijuana_rollingpapers')
     if rollingpaper ~= nil and not alreadyrolling then
         alreadyrolling = true
-	    TriggerClientEvent('pogressBar:drawBar', src, 3700, 'Rolling Joints')
-	    Citizen.Wait(3700)
+        TriggerClientEvent('QBCore:Notify', src, "Rolling Joints", 'primary')
+	    Wait(3700)
 	    alreadyrolling = false
 
         Player.Functions.RemoveItem('marijuana_3.5_high', 1)
