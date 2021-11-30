@@ -1,6 +1,4 @@
-
 local QBCore = exports['qb-core']:GetCoreObject()
-
 --==========================================================================
 
 RegisterServerEvent('doj:server:process1ozMarijuana', function(args) 
@@ -277,24 +275,24 @@ RegisterServerEvent('doj:server:process3.5gMarijuanaBaggies', function(args)
                         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['marijuana_1oz_low'], "remove", removeAmount)
                         local number = math.random(1,9)
                         local randomInfo = { 
-                    --Hybrid
-                    {strain = "Wedding Cake",   potency = "Low", thc = number, type = "Hybrid"},
-                    {strain = "Runtz",          potency = "Low", thc = number, type = "Hybrid"},
-                    {strain = "Gelato",         potency = "Low", thc = number, type = "Hybrid"},
-                    {strain = "OG Kush",        potency = "Low", thc = number, type = "Hybrid"},
-                    --Indica
-                    {strain = "Do-Si-Dos",      potency = "Low", thc = number, type = "Indica"},
-                    {strain = "Zkittlez",       potency = "Low", thc = number, type = "Indica"},
-                    {strain = "Bubba Kush",     potency = "Low", thc = number, type = "Indica"},
-                    {strain = "Mendo Breath",   potency = "Low", thc = number, type = "Indica"},
-                    --Sativa
-                    {strain = "Sour Diesel",    potency = "Low", thc = number, type = "Sativa"},
-                    {strain = "Jack Herer",     potency = "Low", thc = number, type = "Sativa"},
-                    {strain = "Durban Poison",  potency = "Low", thc = number, type = "Sativa"},
-                    {strain = "Green Crack",    potency = "Low", thc = number, type = "Sativa"},
+                            --Hybrid
+                            {strain = "Wedding Cake",   potency = "Low", thc = number, type = "Hybrid"},
+                            {strain = "Runtz",          potency = "Low", thc = number, type = "Hybrid"},
+                            {strain = "Gelato",         potency = "Low", thc = number, type = "Hybrid"},
+                            {strain = "OG Kush",        potency = "Low", thc = number, type = "Hybrid"},
+                            --Indica
+                            {strain = "Do-Si-Dos",      potency = "Low", thc = number, type = "Indica"},
+                            {strain = "Zkittlez",       potency = "Low", thc = number, type = "Indica"},
+                            {strain = "Bubba Kush",     potency = "Low", thc = number, type = "Indica"},
+                            {strain = "Mendo Breath",   potency = "Low", thc = number, type = "Indica"},
+                            --Sativa
+                            {strain = "Sour Diesel",    potency = "Low", thc = number, type = "Sativa"},
+                            {strain = "Jack Herer",     potency = "Low", thc = number, type = "Sativa"},
+                            {strain = "Durban Poison",  potency = "Low", thc = number, type = "Sativa"},
+                            {strain = "Green Crack",    potency = "Low", thc = number, type = "Sativa"},
                         }
                         local info = randomInfo[math.random(#randomInfo)]
-                        TriggerClientEvent('pogressBar:drawBar', src, packageTime, 'Packaging...')
+                        TriggerClientEvent('QBCore:Notify', src, "Packaging...", 'primary', packageTime)
                         SetTimeout(packageTime, function()
                             if Player.Functions.AddItem('marijuana_3.5_low', returnAmount, nil, info, {["quality"] = 100}) then
                                 TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["marijuana_3.5_low"], "add", returnAmount)
@@ -347,7 +345,7 @@ RegisterServerEvent('doj:server:process3.5gMarijuanaBaggies', function(args)
                             {strain = "Green Crack",    potency = "Mid", thc = number, type = "Sativa"},
                         }
                         local info = randomInfo[math.random(#randomInfo)]
-                        TriggerClientEvent('pogressBar:drawBar', src, packageTime, 'Packaging...')
+                        TriggerClientEvent('QBCore:Notify', src, "Packaging...", 'primary', packageTime)
                         SetTimeout(packageTime, function()
                             if Player.Functions.AddItem('marijuana_3.5_mid', returnAmount, nil, info, {["quality"] = 100}) then
                                 TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["marijuana_3.5_mid"], "add", returnAmount)
@@ -400,7 +398,7 @@ RegisterServerEvent('doj:server:process3.5gMarijuanaBaggies', function(args)
                             {strain = "Green Crack",    potency = "High", thc = number, type = "Sativa"},
                         }
                         local info = randomInfo[math.random(#randomInfo)]
-                        TriggerClientEvent('pogressBar:drawBar', src, packageTime, 'Packaging...')
+                        TriggerClientEvent('QBCore:Notify', src, "Packaging...", 'primary', packageTime)
                         SetTimeout(packageTime, function()
                             if Player.Functions.AddItem('marijuana_3.5_high', returnAmount, nil, info, {["quality"] = 100}) then
                                 TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["marijuana_3.5_high"], "add", returnAmount)
