@@ -1,6 +1,4 @@
-
 local QBCore = exports['qb-core']:GetCoreObject()
-
 
 RegisterServerEvent('doj:server:sellOz', function(args) 
 	local src = source
@@ -94,7 +92,11 @@ end)
 --======================================================================================================== Sell Eights
 
 QBCore.Functions.CreateUseableItem("marijuana_phone", function(source, item)
-	TriggerClientEvent('doj:client:useBurnerPhone', source)
+	local src = source
+	local Player = QBCore.Functions.GetPlayer(src)
+	if Player.Functions.GetItemByName(item.name) ~= nil then
+		TriggerClientEvent('doj:client:useBurnerPhone', src)
+	end
 end)
 
 eightsList = {
