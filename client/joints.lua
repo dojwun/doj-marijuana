@@ -56,7 +56,7 @@ AddEventHandler('doj:client:smokeJoint3g', function(source)
         return
     end
 	inJoint = true
-    exports['progressBars']:drawBar(3700, 'Smoking a Joint...')
+    QBCore.Functions.Notify("Lighting Up...", "success", 3700)
     exports['textUi']:DrawTextUi('show', "[X] - Stop smoking")
     TaskStartScenarioInPlace(playerPed, "WORLD_HUMAN_SMOKING_POT", 0, true)
 end)
