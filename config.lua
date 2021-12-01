@@ -36,9 +36,31 @@ Config.cornerSellLocation = { -- *Avalible corner selling locations (see below) 
 }
 
 
---Target Locations
-Config.smokeShopMenu    = vector3(-1172.088, -1571.833, 4.664)
-Config.cropProcessMenu  = vector3(848.161, 2864.132, 58.486)
+-- [SOURCE: https://github.com/sjpfeiffer/ped_spawner]
+Config.PedList = {                                              -- Peds that will be spawned in
+	{
+		model = "a_f_y_hippie_01",                              -- Smoke on the water shop              
+		coords = vector3(-1170.474, -1571.001, 3.2),               
+		heading = 114.796,
+		gender = "female",
+        scenario = "PROP_HUMAN_SEAT_BENCH_FOOD" 
+	},
+	{
+		model = "a_m_m_farmer_01",                              -- Marijuana trimmer in grand senora desert                       
+		coords = vector3(848.644, 2862.025, 57.0),               
+		heading = 141.22,
+		gender = "male",
+        scenario = "PROP_HUMAN_SEAT_CHAIR_DRINK_BEER" 
+	},
+    {
+		model = "a_f_m_fatwhite_01",                           -- Ambiant ped next to Marijuana trimmer                      
+		coords = vector3(849.136, 2860.534, 57.0),               
+		heading = 85.405,
+		gender = "female",
+        scenario = "PROP_HUMAN_SEAT_CHAIR_FOOD" 
+	},
+}
+
 
 
 
