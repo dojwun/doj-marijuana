@@ -2,13 +2,7 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 -- grand senora desert
-exports['qb-target']:AddBoxZone("marijuanaTrimmer", Config.cropProcessMenu, 1.0, 1.5, {
-    name="marijuanaTrimmer",
-    heading= 301.978,
-    debugPoly=false,
-    minZ=56.486,
-    maxZ=59.486
-    }, {
+exports['qb-target']:AddTargetModel(`a_m_m_farmer_01`, {
     options = {
         {
             event = "doj:client:attemptTrimmer",
@@ -20,34 +14,34 @@ exports['qb-target']:AddBoxZone("marijuanaTrimmer", Config.cropProcessMenu, 1.0,
 })
 
 RegisterNetEvent('doj:client:attemptTrimmer', function()
-    local ped = PlayerPedId()
-    QBCore.Functions.Progressbar("knocking", "Knocking..", (math.random(3700, 5000)), false, true, {
-		disableMovement = true,
-		disableCarMovement = true,
-		disableMouse = false,
-		disableCombat = true,
-	}, {
-		animDict = "timetable@jimmy@doorknock@",
-		anim = "knockdoor_idle",
-		flags = 16,
-	}, {}, {}, function() -- Done
-        ClearPedTasks(ped)
-        if GetClockHours() >= 6 and GetClockHours() <= 21 then
-            local chance = math.random(100)
-            if chance <= 50 then
-                TriggerEvent("doj:client:mainProcessMenu")
-                QBCore.Functions.Notify('Yo whats up', 'success')
-            else
-                QBCore.Functions.Notify('No Response... maby try again', 'primary')
-            end
-        else
-            QBCore.Functions.Notify('Go Away!! Its Too Late!', 'error')
-        end
+    -- local ped = PlayerPedId()
+    -- QBCore.Functions.Progressbar("knocking", "Knocking..", (math.random(3700, 5000)), false, true, {
+	-- 	disableMovement = true,
+	-- 	disableCarMovement = true,
+	-- 	disableMouse = false,
+	-- 	disableCombat = true,
+	-- }, {
+	-- 	animDict = "timetable@jimmy@doorknock@",
+	-- 	anim = "knockdoor_idle",
+	-- 	flags = 16,
+	-- }, {}, {}, function() -- Done
+    --     ClearPedTasks(ped)
+    --     if GetClockHours() >= 6 and GetClockHours() <= 21 then
+    --         local chance = math.random(100)
+    --         if chance <= 50 then
+    --             TriggerEvent("doj:client:mainProcessMenu")
+    --             QBCore.Functions.Notify('Yo whats up', 'success')
+    --         else
+    --             QBCore.Functions.Notify('No Response... maby try again', 'primary')
+    --         end
+    --     else
+    --         QBCore.Functions.Notify('Go Away!! Its Too Late!', 'error')
+    --     end
         
-	end, function()
-        ClearPedTasks(ped)
-	end)
-    -- TriggerEvent("doj:client:mainProcessMenu")
+	-- end, function()
+    --     ClearPedTasks(ped)
+	-- end)
+    TriggerEvent("doj:client:mainProcessMenu")
 end)
 
 RegisterNetEvent('doj:client:stopBaggieMenu', function()
