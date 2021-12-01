@@ -1,19 +1,13 @@
 -- Smoke on the water
-exports['qb-target']:AddBoxZone("sellOz", Config.smokeShopMenu, 1.0, 3.0, {
-    name="sellOz",
-    heading= 127.339,
-    debugPoly=false,
-    minZ=3.664,
-    maxZ=6.664
-    }, {
+exports['qb-target']:AddTargetModel(`a_f_y_hippie_01`, {
     options = {
         {
             event = "doj:client:smokeOnTheWaterMenu",
-            icon = "fas fa-circle", 
-            label = "Smoke on the water",
+            icon = "fab fa-speakap", 
+            label = "Speak with employee",
         },
     },
-    distance = 1.3
+    distance = 2.0
 }) 
 
 RegisterNetEvent('doj:client:smokeOnTheWaterMenu', function()
