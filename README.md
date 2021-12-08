@@ -1,5 +1,9 @@
 # doj-marijuana
 
+| If you are intested in recieving github updates join the community on **[Discord](https://discord.gg/NVsaunpesE)**! |
+|----|
+
+
 Script that allows players to Harvest,Plant,Sell & Smoke Marijuana
 
 # More Info Coming Soon
