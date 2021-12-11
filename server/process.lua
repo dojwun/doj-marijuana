@@ -295,6 +295,8 @@ RegisterServerEvent('doj:server:process3.5gMarijuanaBaggies', function(args)
                         TriggerClientEvent('QBCore:Notify', src, "Packaging...", 'primary', packageTime)
                         SetTimeout(packageTime, function()
                             if Player.Functions.AddItem('marijuana_3.5_low', returnAmount, nil, info, {["quality"] = 100}) then
+                                Player.Functions.RemoveItem("marijuana_baggies", baggieAmount)
+                                TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["marijuana_baggies"], "remove", baggieAmount)
                                 TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["marijuana_3.5_low"], "add", returnAmount)
                                 TriggerClientEvent('doj:client:baggieMenu', src)
                             else
@@ -348,6 +350,8 @@ RegisterServerEvent('doj:server:process3.5gMarijuanaBaggies', function(args)
                         TriggerClientEvent('QBCore:Notify', src, "Packaging...", 'primary', packageTime)
                         SetTimeout(packageTime, function()
                             if Player.Functions.AddItem('marijuana_3.5_mid', returnAmount, nil, info, {["quality"] = 100}) then
+                                Player.Functions.RemoveItem("marijuana_baggies", baggieAmount)
+                                TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["marijuana_baggies"], "remove", baggieAmount)
                                 TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["marijuana_3.5_mid"], "add", returnAmount)
                                 TriggerClientEvent('doj:client:baggieMenu', src)
                             else
@@ -401,6 +405,8 @@ RegisterServerEvent('doj:server:process3.5gMarijuanaBaggies', function(args)
                         TriggerClientEvent('QBCore:Notify', src, "Packaging...", 'primary', packageTime)
                         SetTimeout(packageTime, function()
                             if Player.Functions.AddItem('marijuana_3.5_high', returnAmount, nil, info, {["quality"] = 100}) then
+                                Player.Functions.RemoveItem("marijuana_baggies", baggieAmount)
+                                TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["marijuana_baggies"], "remove", baggieAmount)
                                 TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["marijuana_3.5_high"], "add", returnAmount)
                                 TriggerClientEvent('doj:client:baggieMenu', src)
                             else
