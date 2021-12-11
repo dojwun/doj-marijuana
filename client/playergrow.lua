@@ -21,7 +21,7 @@ local shown = false
 --======================================================================= Threads
 
 CreateThread(function()
-    while true do
+    while true do 
         local ped = PlayerPedId()
         local nPlant = nearPlant(ped)
         if nPlant ~= false then
@@ -73,9 +73,9 @@ end)
 
 RegisterNetEvent("doj:client:growthUpdate",function()
     if CurrentPlantInfo ~= nil then
-        CurrentPlantInfo.water = CurrentPlantInfo.water - (0.01 * CurrentPlantInfo.rate)
-        CurrentPlantInfo.food = CurrentPlantInfo.food - (0.01 * CurrentPlantInfo.rate)
-        CurrentPlantInfo.stage = CurrentPlantInfo.stage + (0.01 * CurrentPlantInfo.rate)
+        CurrentPlantInfo.water = CurrentPlantInfo.water - (0.015 * CurrentPlantInfo.rate)
+        CurrentPlantInfo.food = CurrentPlantInfo.food - (0.015 * CurrentPlantInfo.rate)
+        CurrentPlantInfo.stage = CurrentPlantInfo.stage + (0.02 * CurrentPlantInfo.rate) 
     end
 end)
 
@@ -260,7 +260,7 @@ function PlantMenuDead()
     exports['qb-menu']:showHeader({
         {
             header = "Dead Marijuana Plant: "..CurrentPlant,
-            txt = "Stage: "..CurrentPlantInfo.stage.."%",
+            txt = "Stage: "..math.floor(CurrentPlantInfo.stage).."%", 
             isMenuHeader = true
         },
         {
@@ -286,12 +286,12 @@ function PlantMenuStacic()
     exports['qb-menu']:openMenu({
         { 
             header = "Marijuana Plant: "..CurrentPlant,
-            txt = "Stage: "..CurrentPlantInfo.stage.."%<p>Rate: "..CurrentPlantInfo.rate.."%",
+            txt = "Stage: "..math.floor(CurrentPlantInfo.stage).."%<p>Rate: "..math.floor(CurrentPlantInfo.rate).."%",
             isMenuHeader = true
         },
         {
             header = "Fertilizer",
-            txt = "Nutrition: "..CurrentPlantInfo.food.."%",
+            txt = "Nutrition: "..math.floor(CurrentPlantInfo.food).."%",
             params = {
                 event = "doj:client:cropOptions",
                 args = 1
@@ -299,7 +299,7 @@ function PlantMenuStacic()
         },
         {
             header = "Water",
-            txt = "Water: "..CurrentPlantInfo.water.."%",
+            txt = "Water: "..math.floor(CurrentPlantInfo.water).."%",
             params = {
                 event = "doj:client:cropOptions",
                 args = 2
@@ -335,12 +335,12 @@ function PlantMenuAlive()
     exports['qb-menu']:showHeader({
         {
             header = "Marijuana Plant: "..CurrentPlant,
-            txt = "Stage: "..CurrentPlantInfo.stage.."%<p>Rate: "..CurrentPlantInfo.rate.."%",
+            txt = "Stage: "..math.floor(CurrentPlantInfo.stage).."%<p>Rate: "..math.floor(CurrentPlantInfo.rate).."%",
             isMenuHeader = true
         },
         {
             header = "Fertilizer",
-            txt = "Nutrition: "..CurrentPlantInfo.food.."%",
+            txt = "Nutrition: "..math.floor(CurrentPlantInfo.food).."%",
             params = {
                 event = "doj:client:cropOptions",
                 args = 1
@@ -348,7 +348,7 @@ function PlantMenuAlive()
         },
         {
             header = "Water",
-            txt = "Water: "..CurrentPlantInfo.water.."%",
+            txt = "Water: "..math.floor(CurrentPlantInfo.water).."%",
             params = {
                 event = "doj:client:cropOptions",
                 args = 2
