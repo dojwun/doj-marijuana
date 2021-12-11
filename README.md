@@ -6,7 +6,7 @@
 
 Script that allows players to Harvest,Plant,Sell & Smoke Marijuana
 
-# More Info Coming Soon
+# Info
 
 ### Joints
 - roll a **[joint](https://streamable.com/dcw13v)** & **[3g joint](https://streamable.com/z2n3bw)**
