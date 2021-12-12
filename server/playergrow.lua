@@ -5,20 +5,21 @@ CreateThread(function()
 end)
 
 function updatePlants()
-    SetTimeout(30 * 1000,function()
+    SetTimeout(Config.GrowRate * 1000, function()
         updatePlants()
     end)
     --DEAD PLANTS
-    exports.oxmysql:fetch("SELECT id FROM player_crops WHERE (water < 2 OR food < 2) AND rate > 0",{},
-    function(info)
-        for _, v in ipairs(info) do
-            exports.oxmysql:execute('UPDATE player_crops SET rate = ?, food = ?, water = ? WHERE id = ?',{v.id, 0, 0, 0})
+    exports.oxmysql:fetch("SELECT id FROM player_crops WHERE (water = 0 OR food = 0) AND rate = 0",{},function(id)
+        for _, v in ipairs(id) do
+            exports.oxmysql:execute('DELETE FROM player_crops WHERE id = ?', {v.id}, function()
+                TriggerClientEvent("doj:client:DeleteEntity", -1)  
+            end)
         end
     end)
     -- ALIVE PLANT REDUCTION
     exports.oxmysql:execute("UPDATE `player_crops` SET `stage`=`stage` + (0.01 * `rate`) , `food` = `food` - (0.02 * `rate`), `water` = `water` -  (0.02 * `rate`) WHERE water >= 2 OR food >= 2",{},
     function()
-        TriggerClientEvent("ddoj:client:growthUpdate", -1)
+        TriggerClientEvent("doj:client:growthUpdate", -1)
     end)
     -- GROW PLANTS
     exports.oxmysql:fetch("SELECT id, stage FROM player_crops WHERE (stage >= 30 AND stage <= 31) OR (stage >= 80 AND stage <= 81)",{},
