@@ -22,33 +22,35 @@ local shown = false
 
 CreateThread(function()
     while true do 
-        local ped = PlayerPedId()
-        local nPlant = nearPlant(ped)
-        if nPlant ~= false then
-            if not shown then
-                shown = true
-                QBCore.Functions.TriggerCallback("doj:server:getPlant",function(info)
-                    CurrentPlant = nPlant
-                    CurrentPlantInfo = info
-                    if CurrentPlantInfo.food and CurrentPlantInfo.water == 0 then
-                        PlantMenuDead()
-                    else
-                        PlantMenuAlive()
-                    end
-                end,nPlant)
+        if LocalPlayer.state.isLoggedIn then
+            local ped = PlayerPedId() 
+            local nPlant = nearPlant(ped)
+            if nPlant ~= false then
+                if not shown then
+                    shown = true
+                    QBCore.Functions.TriggerCallback("doj:server:getPlant",function(info)
+                        CurrentPlant = nPlant
+                        CurrentPlantInfo = info
+                        if CurrentPlantInfo.food and CurrentPlantInfo.water == 0 then
+                            PlantMenuDead()
+                        else
+                            PlantMenuAlive()
+                        end
+                    end,nPlant)
+                end
+            else
+                if shown then
+                    CurrentPlant = nil
+                    CurrentPlantInfo = nil
+                    exports['qb-menu']:closeMenu() 
+                    shown = false
+                end
             end
-        else
-            if shown then
-                CurrentPlant = nil
-                CurrentPlantInfo = nil
-                exports['qb-menu']:closeMenu() 
-                shown = false
+            if nPlant == false then
+                Wait(1000)
+            else
+                Wait(1)
             end
-        end
-        if nPlant == false then
-            Wait(1000)
-        else
-            Wait(1)
         end
         Wait(100)
     end
@@ -65,6 +67,22 @@ end)
 
 --======================================================================= Events
 
+RegisterNetEvent("doj:client:DeleteEntity",function()
+    exports['qb-menu']:closeMenu() 
+    Wait(2000)
+    if SpawnedPlants[CurrentPlant] ~= nil then
+        DeleteEntity(SpawnedPlants[CurrentPlant])
+    end
+    Plants[CurrentPlant] = nil
+    SpawnedPlants[CurrentPlant] = nil
+    CurrentPlant = nil
+    CurrentPlantInfo = nil
+    ClearPedTasks(ped)
+    Wait(4000)
+    action = false
+    ClearPedTasksImmediately(ped)
+end)
+
 RegisterNetEvent("doj:client:growPlant",function(id, percent)
     if Plants[id] ~= nil and SpawnedPlants[id] ~= nil then
         setPlant(id, percent)
@@ -73,9 +91,9 @@ end)
 
 RegisterNetEvent("doj:client:growthUpdate",function()
     if CurrentPlantInfo ~= nil then
-        CurrentPlantInfo.water = CurrentPlantInfo.water - (0.015 * CurrentPlantInfo.rate)
-        CurrentPlantInfo.food = CurrentPlantInfo.food - (0.015 * CurrentPlantInfo.rate)
-        CurrentPlantInfo.stage = CurrentPlantInfo.stage + (0.02 * CurrentPlantInfo.rate) 
+        CurrentPlantInfo.water = CurrentPlantInfo.water - (0.02 * CurrentPlantInfo.rate)
+        CurrentPlantInfo.food = CurrentPlantInfo.food - (0.02 * CurrentPlantInfo.rate)
+        CurrentPlantInfo.stage = CurrentPlantInfo.stage + (0.01 * CurrentPlantInfo.rate) 
     end
 end)
 
