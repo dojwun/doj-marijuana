@@ -58,10 +58,16 @@ end)
 
 --======================================================================= Callbacks
 
-QBCore.Functions.TriggerCallback("doj:server:getInfo",function(plants)
-    Plants = plants
-    for k, v in pairs(Plants) do
-        spawnPlant(v.seed, v.coords, v.info.stage, k)
+CreateThread(function ()
+    while true do
+        QBCore.Functions.TriggerCallback("doj:server:getInfo",function(plants)
+            Plants = plants
+            for k, v in pairs(Plants) do
+                spawnPlant(v.seed, v.coords, v.info.stage, k)
+            end
+            print(json.encode(plants))
+        end)
+        Wait(1000)
     end
 end)
 
