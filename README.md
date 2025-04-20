@@ -1,4 +1,4 @@
-# 🌱 doj-marijuana 
+# 🌱 Doj-Marijuana Renamed To Schedule-Wun
 
 ### ⭐*Schedule 1 Inspired Update Coming Soon*⭐
 ## More details to come!
