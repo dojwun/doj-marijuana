@@ -6,6 +6,7 @@
 
 | Features     		| Status                              	| Description
 | --------------------- | ------------------------------------- |------------------------------------- |
+| `Dealers`   		| 📅 Planned 				| Have an npc do your dirty work |
 | `Picking`        	| 📅 Planned 				| Steal the farmers crops, Better description coming soon|
 | `Drying` 		| 📅 Planned 				| Description Coming Soon |
 | `Effects` 		| 📅 Planned 				| Description Coming Soon |
