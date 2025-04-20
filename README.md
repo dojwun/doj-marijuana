@@ -1,6 +1,6 @@
 # 🌱 doj-marijuana 
 
-### ⭐*Update Coming Soon*⭐
+### ⭐*Schedule 1 Inspired Update Coming Soon*⭐
 ## More details to come!
 
 
