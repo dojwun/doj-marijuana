@@ -6,7 +6,7 @@
 | --------------------- | -------------------------------------  |
 
 
-![vid](https://streamable.com/rdbtc6)
+**[preview](https://streamable.com/visdrn)**
 
 # Dependencies
 - [qbx_core](https://github.com/Qbox-project/qbx_core) 
