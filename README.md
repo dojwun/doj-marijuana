@@ -12,7 +12,7 @@
 | `Dealers`   		| 📅 Planned 				| Have an npc do your *dirty work* |
 | `Drying` 		| 📅 Planned 				| Description Coming Soon |
 | `Effects` 		| 📅 Planned 				| Description Coming Soon |
-| `Bagging` 		| ![vid](https://i.imgur.com/No2C8Kj.gif) 				| Bag your weed in a *simple* yet *unique* way  |
+| `Bagging` 		| ![vid](https://i.imgur.com/4NsbM2p.gif)				| Bag your weed in a *simple* yet *unique* way  |
 | `Shop`   		| ![vid](https://i.imgur.com/BQZ4IV2.gif)				| Shop for *useful items* to related to the script |
 
 
