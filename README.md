@@ -12,8 +12,8 @@
 | `Dealers`   		| 📅 Planned 				| Have an npc do your *dirty work* |
 | `Drying` 		| 📅 Planned 				| Description Coming Soon |
 | `Effects` 		| 📅 Planned 				| Description Coming Soon |
-| `Bagging` 		| ![vid](https://i.imgur.com/4NsbM2p.gif)				| Bag your weed in a *simple* yet *unique* way  |
-| `Shop`   		| ![vid](https://i.imgur.com/BQZ4IV2.gif)				| Shop for *useful items* to related to the script |
+| [Bagging](https://github.com/dojwun/Schedule-Wun/tree/main/%5BSchedule-Wun%5D/Schedule-Wun-Bagging) | ![vid](https://i.imgur.com/4NsbM2p.gif) | Bag your weed in a *simple* yet *unique* way  |
+| [Shop](https://github.com/dojwun/Schedule-Wun/tree/main/%5BSchedule-Wun%5D/Schedule-Wun-Shop) | ![vid](https://i.imgur.com/BQZ4IV2.gif) | Shop for *useful items* to related to the script |
 
 
 
