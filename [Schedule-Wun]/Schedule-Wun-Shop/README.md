@@ -6,9 +6,7 @@
 | --------------------- | -------------------------------------  |
 
 
-**[preview](https://streamable.com/visdrn)**
-
-![vid](https://i.imgur.com/WwbenVU.gif)
+![vid](https://i.imgur.com/BQZ4IV2.gif)
 
 # Dependencies
 - [qbx_core](https://github.com/Qbox-project/qbx_core) 
