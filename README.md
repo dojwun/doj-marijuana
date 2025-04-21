@@ -9,11 +9,19 @@
 | `Mixing`   		| 🔄 Coming Soon  			| Mix bud & items to make a *random strain* with *special characteristics* |
 | `Harvesting`        	| 🔄 Coming Soon  				| Try to steal the local farmers crops, *Dont alert the dog!*|
 | `Selling`   		| 🔄 Coming Soon  			| Sell *anywhere*, Npc will approch you |
-| `Bagging` 		| ✅ Finished 				| Bag your weed in a *simple* yet *unique* way  |
-| `Shop`   		| ✅ Finished 				| Shop for *useful items* to related to the script |
 | `Dealers`   		| 📅 Planned 				| Have an npc do your *dirty work* |
 | `Drying` 		| 📅 Planned 				| Description Coming Soon |
 | `Effects` 		| 📅 Planned 				| Description Coming Soon |
+| `Bagging` 		| ![vid](https://i.imgur.com/No2C8Kj.gif) 				| Bag your weed in a *simple* yet *unique* way  |
+| `Shop`   		| ![vid](https://i.imgur.com/BQZ4IV2.gif)				| Shop for *useful items* to related to the script |
+
+
+
+
+
+
+
+
 
 
 
