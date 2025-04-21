@@ -6,12 +6,12 @@
 
 | Features     		| Status                              	| Description
 | --------------------- | ------------------------------------- |------------------------------------- |
-| `Mixing`   		| 🔄 Coming Soon  			| Mix bud & items to make a *random strain* with *special characteristics* |
 | `Harvesting`        	| 🔄 Coming Soon  				| Try to steal the local farmers crops, *Dont alert the dog!*|
 | `Selling`   		| 🔄 Coming Soon  			| Sell *anywhere*, Npc will approch you |
 | `Dealers`   		| 📅 Planned 				| Have an npc do your *dirty work* |
 | `Drying` 		| 📅 Planned 				| Description Coming Soon |
 | `Effects` 		| 📅 Planned 				| Description Coming Soon |
+| `Mixing` 🔄ComingSoon  		|  ![vid](https://i.imgur.com/Cht0xP9.gif) 			| Mix bud & items to make a *random strain* with *special characteristics* |
 | [Bagging](https://github.com/dojwun/Schedule-Wun/tree/main/%5BSchedule-Wun%5D/Schedule-Wun-Bagging) | ![vid](https://i.imgur.com/4NsbM2p.gif) | Bag your weed in a *simple* yet *unique* way  |
 | [Shop](https://github.com/dojwun/Schedule-Wun/tree/main/%5BSchedule-Wun%5D/Schedule-Wun-Shop) | ![vid](https://i.imgur.com/BQZ4IV2.gif) | Shop for *useful items* to related to the script |
 
