@@ -6,10 +6,10 @@
 
 | Features     		| Status                              	| Description
 | --------------------- | ------------------------------------- |------------------------------------- |
-| `Selling`   		| 🔄 Coming Soon  			| Sell *anywhere*, Npc will approch you |
+| `Selling`   		| 🔄 Coming Soon  			| Sell *anywhere* you want |
 | `Dealers`   		| 📅 Planned 				| Have an npc do your *dirty work* |
-| `Drying` 		| 📅 Planned 				| Description Coming Soon |
 | `Effects` 		| 📅 Planned 				| Description Coming Soon |
+| `Drying` 		| 📅 Planned 				| Description Coming Soon |
 | `Harvesting`🔄ComingSoon| ![vid](https://i.imgur.com/JgSeTqk.gif)	| Try to steal the local farmers crops, *Dont alert the dog!*|
 | `Mixing`🔄ComingSoon| ![vid](https://i.imgur.com/Cht0xP9.gif) | Mix items to make a *Random Strain* or a *Custom Strain* |
 |💰[Bagging](https://github.com/dojwun/Schedule-Wun/tree/main/%5BSchedule-Wun%5D/Schedule-Wun-Bagging)💰| ![vid](https://i.imgur.com/4NsbM2p.gif) | Bag your weed in a *simple* yet *unique* way  |
