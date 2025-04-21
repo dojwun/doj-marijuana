@@ -2,8 +2,9 @@
 
 
 
-| `Shop`   		| Shop for *useful items* to related to the script | 
+| `Shop`🛍️ | Shop for *useful items* to related to the script | 
 | --------------------- | -------------------------------------  |
+| `Cam`📹| Clean interactions thanks to [envi-interact](https://github.com/Envi-Scripts/envi-interact)  | 
 
 
 ![vid](https://i.imgur.com/BQZ4IV2.gif)
